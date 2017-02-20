@@ -24,7 +24,10 @@ import com.pedro.game.Main;
 import com.pedro.game.actors.BulletActor;
 import com.pedro.game.actors.CityActor;
 import com.pedro.game.actors.LaserActor;
-import com.pedro.game.actors.MeteoriteActor;
+import com.pedro.game.actors.meteorite.MeteoriteActor;
+import com.pedro.game.actors.meteorite.MeteoriteActorFast;
+import com.pedro.game.actors.meteorite.MeteoriteActorNormal;
+import com.pedro.game.actors.meteorite.MeteoriteActorSlow;
 import com.pedro.game.utils.BaseScreen;
 import com.pedro.game.utils.MakeAnimation;
 
@@ -167,16 +170,15 @@ public class GameScreen extends BaseScreen {
     }
 
     if (spawn <= 0) {
-      int size;
+      MeteoriteActor meteorite;
       int random = MathUtils.random(0, 100);
       if (random < 70) {
-        size = Gdx.graphics.getWidth() / 15;
+        meteorite = new MeteoriteActorNormal(city, game);
       } else if (random >= 70 && random < 90) {
-        size = Gdx.graphics.getWidth() / 9;
+        meteorite = new MeteoriteActorFast(city, game);
       } else {
-        size = Gdx.graphics.getWidth() / 7;
+        meteorite = new MeteoriteActorSlow(city, game);
       }
-      MeteoriteActor meteorite = new MeteoriteActor(city, size, size, game);
       listMeteorite.add(meteorite);
       stage.addActor(meteorite);
       spawn = 1f;

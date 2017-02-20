@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.pedro.game.Main;
+import com.pedro.game.actors.meteorite.MeteoriteActor;
 import com.pedro.game.screens.GameScreen;
 
 /**

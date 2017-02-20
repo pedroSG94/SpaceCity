@@ -72,7 +72,6 @@ public class CityActor extends Actor {
 
   @Override
   public void draw(Batch batch, float parentAlpha) {
-
     rotation = sCanon.getRotation();
     if (contador != 0) {
       state += Gdx.graphics.getDeltaTime();

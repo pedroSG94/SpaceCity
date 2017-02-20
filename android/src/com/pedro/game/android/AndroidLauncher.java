@@ -14,6 +14,7 @@ import com.pedro.game.utils.Score;
 import java.util.ArrayList;
 
 public class AndroidLauncher extends AndroidApplication implements ChangeToAndroid {
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class AndroidLauncher extends AndroidApplication implements ChangeToAndro
 
   @Override
   public void insertScore(int score, String name) {
+
     try {
       DataBase db = new DataBase(getApplicationContext());
       db.open();

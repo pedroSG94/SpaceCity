@@ -6,6 +6,7 @@ import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.pedro.game.actors.meteorite.MeteoriteActor;
 import com.pedro.game.screens.GameScreen;
 
 /**
